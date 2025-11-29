@@ -1,224 +1,407 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="scr">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Claudia Nunes - Portfólio Profissional</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <h2>Claudia Nunes.</h2>
-            <ul>
-                <ul>
-                    <li><a href="#pagina-inicial" data-lang="true" data-pt="Início" data-en="Home">Início</a></li>
-                    <li><a href="#sobre" data-lang="true" data-pt="Sobre" data-en="About">Sobre</a></li>
-                    <li><a href="#projeto" data-lang="true" data-pt="Projetos" data-en="Projects">Projetos</a></li>
-                </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Claudia Nunes</h2>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-lang="true" data-pt="Início" data-en="Home">Início</a></li>
+                <li><a href="#about" class="nav-link" data-lang="true" data-pt="Sobre" data-en="About">Sobre</a></li>
+                <li><a href="#projects" class="nav-link" data-lang="true" data-pt="Projetos"
+                        data-en="Projects">Projetos</a></li>
+
+                <li class="lang-selector">
+                    <button class="lang-btn" data-lang="pt" title="Português">
+                        <img src="assets/img/brasil.png" alt="PT">
+                    </button>
+                    <button class="lang-btn" data-lang="en" title="English">
+                        <img src="assets/img/usa.png" alt="EN">
+                    </button>
+                </li>
             </ul>
-            <!-- Botões de troca de idioma com bandeiras -->
-            <div class="lang-selector">
-                <a href="#" data-lang="pt"><img src="assets/img/brasil.svg" alt="Português" title="Português"></a>
-                <a href="#" data-lang="en"><img src="assets/img/usa.svg" alt="Inglês" title="Inglês"></a>
-            </div>
-        </nav>
-    </header>
 
-    <!--################################home-->
-    <section id="pagina-inicial" class="hero">
-        <div class="hero-image">
-            <img src="assets/img/Claudia2.png" alt="Claudia Nunes">
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+    </nav>
 
-        <div class="hero-text">
-            <span class="role" data-lang="true" data-pt="Desenvolvedora de Software" data-en="Software Developer">Desenvolvedora de Software</span>
-            <h1 data-lang="true" data-pt="Olá, meu nome é<br> <strong>Claudia Nunes</strong>" data-en="Hello, my name is <br><strong>Claudia Nunes</strong>">
-                Olá, meu nome é<br> <strong>Claudia Nunes</strong>
-            </h1>
-            <p data-lang="true" data-pt="Sou graduada em Engenharia de Produção e estudante de Desenvolvimento de Software Multiplataforma<br> na Fatec de Jacareí-SP, Brasil." 
-               data-en="I have a degree in Production Engineering and am a student of Multiplatform Software Development <br>at Fatec Jacareí-SP, Brazil.">
-                Sou graduada em Engenharia de Produção e estudante de Desenvolvimento de Software Multiplataforma na Fatec de Jacareí-SP, Brasil.
-                
-            </p>
-            <div class="buttons">
-                <br>
-                <br>
-                <a href="https://github.com/Claudia-Nunes" target="_blank"><img src="assets\img\github_home.png"
-                        alt="github"></a>
-                <a href="https://www.linkedin.com/in/claudia-nuness/" target="_blank"><img
-                        src="assets\img\linkedin_home.png" alt="LinkedIn"></a>
-                <a href="mailto:claudia.dn@outlook.com" target="_blank"><img src="assets\img\gmail.png" alt="Email"></a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle" data-lang="true" data-pt="Desenvolvedora de Software"
+                    data-en="Software Developer">
+                    Desenvolvedora de Software
+                </p>
 
+                <h1 class="hero-title">
+                    <span data-lang="true" data-pt="Olá, meu nome é" data-en="Hello, my name is">Olá, meu nome
+                        é</span><br>
+                    <strong>Claudia Nunes</strong>
+                </h1>
+
+                <p class="hero-description" data-lang="true"
+                    data-pt="Sou graduada em Engenharia de Produção e Desenvolvimento de Software Multiplataforma na Fatec de Jacareí-SP, Brasil."
+                    data-en="I have a degree in Production Engineering and Multiplatform Software Development at Fatec Jacareí-SP, Brazil.">
+                    Sou graduada em Engenharia de Produção e Desenvolvimento de Software Multiplataforma na Fatec de
+                    Jacareí-SP, Brasil.
+                </p>
+
+                <div class="hero-social">
+                    <a href="https://github.com/Claudia-Nunes" target="_blank" class="social-btn" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/claudia-nuness/" target="_blank" class="social-btn"
+                        title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:claudia.dn@outlook.com" class="social-btn" title="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-circle">
+                    <img src="assets/img/Claudia3.png" alt="Claudia Nunes" class="hero-photo">
+                </div>
             </div>
         </div>
-
     </section>
 
-    <!--################################Sobre-->
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang="true" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
+                <div class="title-underline"></div>
+            </div>
 
-    <section id="sobre" class="about">
-        <div class="text-content">
-            <h1 data-lang="true" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h1>
-            <p data-lang="true" 
-            data-pt="Olá! Sou uma profissional apaixonada por <strong>melhoria e otimização de processos</strong>.<br><br>Com formação em <strong>Engenharia de Produção</strong> e cursando o último ano de <strong>Desenvolvimento de Software</strong> na Fatec, combino conhecimentos analíticos e técnicos para desenvolver soluções eficientes, facilitando a execução de atividades rotineiras por meio de <strong>automação e programação em VBA para planilhas do Excel</strong>.<br><br>Tenho sólida experiência na área de <strong>Engenharia de Manufatura</strong>, atuando ativamente na elaboração e otimização de processos, sempre buscando aumentar a produtividade e reduzir desperdícios. Meu foco é transformar desafios operacionais em oportunidades de melhoria contínua, utilizando tecnologia e metodologias eficientes." 
-            
-            data-en="Hello! I am a professional passionate about <strong>process improvement and optimization</strong>.<br><br>I have a degree in <strong>Production Engineering</strong> and am in my final year of <strong>Software Development</strong> at Fatec, combining analytical and technical knowledge to develop efficient solutions, facilitating routine task execution through <strong>automation and VBA programming for Excel spreadsheets</strong>.<br><br>I have solid experience in the field of <strong>Manufacturing Engineering</strong>, actively working on process development and optimization, always aiming to increase productivity and reduce waste. My focus is to turn operational challenges into continuous improvement opportunities using technology and efficient methodologies.">
-            
-            Olá! Sou uma profissional apaixonada por <strong>melhoria e otimização de processos</strong>.<br><br>Com formação em <strong>Engenharia de Produção</strong> e cursando o último ano de <strong>Desenvolvimento de Software</strong> na Fatec, combino conhecimentos analíticos e técnicos para desenvolver soluções eficientes, facilitando a execução de atividades rotineiras por meio de <strong>automação e programação em VBA para planilhas do Excel</strong>.<br><br>Tenho sólida experiência na área de <strong>Engenharia de Manufatura</strong>, atuando ativamente na elaboração e otimização de processos, sempre buscando aumentar a produtividade e reduzir desperdícios. Meu foco é transformar desafios operacionais em oportunidades de melhoria contínua, utilizando tecnologia e metodologias eficientes.
-         </p>
-         
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/img/Claudia3.png" alt="Sobre mim">
+                </div>
 
-            </p>
-            <a href="assets/CV_Claudia Nunes_Portifolio.pdf" download="CV_Claudia Nunes_Portifolio.pdf" target="_blank">
-                <button class="resume-btn">Download CV</button>
-            </a>
+                <div class="about-text">
+                    <p data-lang="true"
+                        data-pt="Olá! Sou uma profissional apaixonada por <strong>melhoria e otimização de processos</strong>."
+                        data-en="Hello! I am a professional passionate about <strong>process improvement and optimization</strong>.">
+                        Olá! Sou uma profissional apaixonada por <strong>melhoria e otimização de processos</strong>.
+                    </p>
+
+                    <p data-lang="true"
+                        data-pt="Com formação em <strong>Engenharia de Produção</strong> e <strong>Desenvolvimento de Software</strong> na Fatec, combino conhecimentos analíticos e técnicos para desenvolver soluções eficientes, facilitando a execução de atividades rotineiras por meio de <strong>automação e programação em VBA para planilhas do Excel</strong>."
+                        data-en="I have a degree in <strong>Production Engineering</strong> and <strong>Software Development</strong> at Fatec, combining analytical and technical knowledge to develop efficient solutions, facilitating routine task execution through <strong>automation and VBA programming for Excel spreadsheets</strong>.">
+                        Com formação em <strong>Engenharia de Produção</strong> e <strong>Desenvolvimento de
+                            Software</strong> na Fatec, combino conhecimentos analíticos e técnicos para desenvolver
+                        soluções eficientes, facilitando a execução de atividades rotineiras por meio de
+                        <strong>automação e programação em VBA para planilhas do Excel</strong>.
+                    </p>
+
+                    <p data-lang="true"
+                        data-pt="Tenho sólida experiência na área de <strong>Engenharia de Manufatura</strong>, atuando ativamente na elaboração e otimização de processos, sempre buscando aumentar a produtividade e reduzir desperdícios. Meu foco é transformar desafios operacionais em oportunidades de melhoria contínua, utilizando tecnologia e metodologias eficientes."
+                        data-en="I have solid experience in the field of <strong>Manufacturing Engineering</strong>, actively working on process development and optimization, always aiming to increase productivity and reduce waste. My focus is to turn operational challenges into continuous improvement opportunities using technology and efficient methodologies.">
+                        Tenho sólida experiência na área de <strong>Engenharia de Manufatura</strong>, atuando
+                        ativamente na elaboração e otimização de processos, sempre buscando aumentar a produtividade e
+                        reduzir desperdícios. Meu foco é transformar desafios operacionais em oportunidades de melhoria
+                        contínua, utilizando tecnologia e metodologias eficientes.
+                    </p>
+
+                    <a href="assets/CV_Claudia Nunes_Portifolio.pdf" class="btn-primary" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download CV
+                    </a>
+
+                </div>
+            </div>
         </div>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img src="assets/img/Claudia1.png" alt="Profile Picture">
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang="true" data-pt="Projetos Acadêmicos" data-en="Academic Projects">
+                    Projetos Acadêmicos</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/project-1.png" alt="Projeto SCRUM">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-lang="true" data-pt="1º Projeto ABP - Aplicação Web Instruções SCRUM"
+                            data-en="1st ABP Project - Web Application for SCRUM Instructions">
+                            1º Projeto ABP - Aplicação Web Instruções SCRUM
+                        </h3>
+                        <p data-lang="true"
+                            data-pt="Desenvolvimento de uma aplicação web para instruções sobre metodologias ágeis, com foco no SCRUM. Fui responsável pela elaboração do conteúdo explicativo sobre papéis e eventos do SCRUM, e pela implementação da navegação entre páginas utilizando HTML, CSS e JavaScript."
+                            data-en="Development of a web application for instructions on agile methodologies, focusing on SCRUM. I was responsible for developing the explanatory content about SCRUM roles and events, and implementing page navigation using HTML, CSS, and JavaScript.">
+                            Desenvolvimento de uma aplicação web para instruções sobre metodologias ágeis, com foco no
+                            SCRUM. Fui responsável pela elaboração do conteúdo explicativo sobre papéis e eventos do
+                            SCRUM, e pela implementação da navegação entre páginas utilizando HTML, CSS e JavaScript.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/ScrumerDataAPI/ScrumerDataAPI" target="_blank" class="project-link">
+                            Ver no GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/project-2.png" alt="Projeto Bike4you">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-lang="true"
+                            data-pt="2º Projeto ABP - Aplicação Web para Aluguel de Bicicletas Peer-to-Peer"
+                            data-en="2nd ABP Project - Web Application for Peer-to-Peer Bicycle Rental">
+                            2º Projeto ABP - Aplicação Web para Aluguel de Bicicletas Peer-to-Peer
+                        </h3>
+                        <p data-lang="true"
+                            data-pt="Desenvolvimento de uma plataforma web para aluguel de bicicletas no modelo peer-to-peer. Fui responsável pela criação do protótipo no Figma, pela modelagem do banco de dados PostgreSQL e pelo desenvolvimento do módulo de cadastro de usuários utilizando TypeScript e React."
+                            data-en="Development of a web platform for peer-to-peer bicycle rentals. I was responsible for creating the Figma prototype, modeling the PostgreSQL database, and developing the user registration module using TypeScript and React.">
+                            Desenvolvimento de uma plataforma web para aluguel de bicicletas no modelo peer-to-peer. Fui
+                            responsável pela criação do protótipo no Figma, pela modelagem do banco de dados PostgreSQL
+                            e pelo desenvolvimento do módulo de cadastro de usuários utilizando TypeScript e React.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <a href="https://github.com/DevsDomain/Bike4you" target="_blank" class="project-link">
+                            Ver no GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/project-3.png" alt="Projeto D-Traker">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-lang="true" data-pt="3º Projeto ABP - Sistema Web para Gerenciamento de Projetos"
+                            data-en="3rd ABP Project - Web System for Project Management">
+                            3º Projeto ABP - Sistema Web para Gerenciamento de Projetos
+                        </h3>
+                        <p data-lang="true"
+                            data-pt="Criação de um sistema web para controle de tarefas, progresso e análise de dados em projetos. Fui responsável pela criação do protótipo no Figma, pela construção das páginas de dashboard com gráficos em React e pela integração dos dados utilizando MongoDB."
+                            data-en="Creation of a web system for task control, progress tracking, and data analysis in projects. I was responsible for creating the Figma prototype, building the dashboard pages with graphs in React, and integrating the data using MongoDB.">
+                            Criação de um sistema web para controle de tarefas, progresso e análise de dados em
+                            projetos. Fui responsável pela criação do protótipo no Figma, pela construção das páginas de
+                            dashboard com gráficos em React e pela integração dos dados utilizando MongoDB.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Charts</span>
+                        </div>
+                        <a href="https://github.com/DevsDomain/D-Traker" target="_blank" class="project-link">
+                            Ver no GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image-mobile">
+                        <img src="assets/img/project-4.png" alt="Projeto D-Nutri">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-lang="true"
+                            data-pt="4º Projeto ABP - Aplicação Mobile para Controle de Alimentação e Nutrição"
+                            data-en="4th ABP Project - Mobile Application for Food and Nutrition Control">
+                            4º Projeto ABP - Aplicação Mobile para Controle de Alimentação e Nutrição
+                        </h3>
+                        <p data-lang="true"
+                            data-pt="Desenvolvimento de um aplicativo mobile para registro e monitoramento de ingestão de alimentos e nutrientes. Fui responsável pela criação do protótipo no Figma, pelo desenvolvimento da interface de registro de alimentos no React Native e pela configuração da conexão com os bancos de dados MongoDB e PostgreSQL."
+                            data-en="Development of a mobile application for recording and monitoring food and nutrient intake. I was responsible for creating the Figma prototype, developing the food registration interface in React Native, and configuring the connection with the MongoDB and PostgreSQL databases.">
+                            Desenvolvimento de um aplicativo mobile para registro e monitoramento de ingestão de
+                            alimentos e nutrientes. Fui responsável pela criação do protótipo no Figma, pelo
+                            desenvolvimento da interface de registro de alimentos no React Native e pela configuração da
+                            conexão com os bancos de dados MongoDB e PostgreSQL.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <a href="https://github.com/DevsDomain/D-Nutri" target="_blank" class="project-link">
+                            Ver no GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image-mobile">
+                        <img src="assets/img/project-5.png" alt="Projeto D-FireTrack">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-lang="true"
+                            data-pt="5º Projeto ABP - D-FireTrack: Sistema de Monitoramento de Queimadas"
+                            data-en="5th ABP Project - D-FireTrack: Wildfire Monitoring System">
+                            5º Projeto ABP - D-FireTrack: Sistema de Monitoramento de Queimadas
+                        </h3>
+                        <p data-lang="true"
+                            data-pt="Desenvolvimento de um sistema web para monitoramento de queimadas e cicatrizes de fogo através de dados geoespaciais. Fui responsável pela criação do protótipo no Figma, pela implementação da integração entre o mapa interativo e a seleção de coordenadas, bem como pelo desenvolvimento do painel de filtros por período de datas e área geográfica utilizando React e TypeScript. Além disso, colaborei na estruturação do backend para a gestão das informações no banco de dados MongoDB."
+                            data-en="Development of a web system for monitoring wildfires and burn scars using geospatial data. I was responsible for creating the Figma prototype, implementing the integration between the interactive map and coordinate selection, as well as developing the filter panel for date range and geographic area using React and TypeScript. Additionally, I contributed to structuring the backend for managing information in the MongoDB database.">
+                            Desenvolvimento de um sistema web para monitoramento de queimadas e cicatrizes de fogo
+                            através de dados geoespaciais. Fui responsável pela criação do protótipo no Figma, pela
+                            implementação da integração entre o mapa interativo e a seleção de coordenadas, bem como
+                            pelo desenvolvimento do painel de filtros por período de datas e área geográfica utilizando
+                            React e TypeScript. Além disso, colaborei na estruturação do backend para a gestão das
+                            informações no banco de dados MongoDB.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Geospatial</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <a href="https://github.com/DevsDomain/D-FireTrack" target="_blank" class="project-link">
+                            Ver no GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image-mobile">
+                        <img src="assets/img/project-6.png" alt="Projeto MindCare">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-lang="true"
+                            data-pt="6º Projeto ABP – MindCare: Aplicativo de Bem-Estar com Análise Emocional via IA"
+                            data-en="6th ABP Project – MindCare: Well-Being App with AI-Driven Emotion Analysis">
+                            6º Projeto ABP – MindCare: Aplicativo de Bem-Estar com Análise Emocional via IA
+                        </h3>
+                        <p data-lang="true"
+                            data-pt="Desenvolvimento de um aplicativo mobile de bem-estar emocional capaz de analisar o humor do usuário através de processamento de linguagem natural (NLP) com IA preditiva. O sistema sugere trilhas de atividades de 5 a 7 minutos por 7 dias, baseadas na emoção detectada — como raiva, ansiedade, tristeza ou estresse. Atuei no desenvolvimento do frontend em React Native com TypeScript, criação das telas completas no Figma, integração com o backend Node.js + MongoDB e construção de um micro-serviço adicional em Python (FastAPI) dedicado à classificação de emoções. Além disso, implementei a navegação entre telas, lógica de trilhas, registro de progresso, gráfico de humor, autenticação e integração das APIs."
+                            data-en="Development of a mobile well-being app able to analyze the user's mood using natural language processing (NLP) with predictive AI. The system suggests activity tracks of 5 to 7 minutes for 7 days, based on the detected emotion — such as anger, anxiety, sadness or stress. I worked on the frontend development in React Native with TypeScript, creation of all screens in Figma, integration with the backend built in Node.js + MongoDB, and development of an additional microservice in Python (FastAPI) dedicated to emotion classification. I also implemented screen navigation, track logic, progress tracking, mood chart, authentication, and API integrations.">
+                            Desenvolvimento de um aplicativo mobile de bem-estar emocional capaz de analisar o humor do
+                            usuário através de processamento de linguagem natural (NLP) com IA preditiva. O sistema
+                            sugere trilhas de atividades de 5 a 7 minutos por 7 dias, baseadas na emoção detectada —
+                            como raiva, ansiedade, tristeza ou estresse. Atuei no desenvolvimento do frontend em React
+                            Native com TypeScript, criação das telas completas no Figma, integração com o backend
+                            Node.js + MongoDB e construção de um micro-serviço adicional em Python (FastAPI) dedicado à
+                            classificação de emoções. Além disso, implementei a navegação entre telas, lógica de
+                            trilhas, registro de progresso, gráfico de humor, autenticação e integração das APIs.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <a href="https://github.com/ThePerryDev/MindCare" target="_blank" class="project-link">
+                            Ver no GitHub →
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--################################Projetos-->
-
-    <section id="projeto" class="projects">
-        <h2 data-lang="true" data-pt="Projetos Acadêmicos" data-en="Academic Projects">Projetos Acadêmicos</h2>
-        <br>
-        <div class="project-list">
-            <div class="project">
-                <div class="project-text">
-                    <h3 data-lang="true" data-pt="1º Projeto ABP - Aplicação Web Instruções SCRUM" data-en="1st ABP Project - Web Application for SCRUM Instructions">
-                        1º Projeto ABP - Aplicação Web Instruções SCRUM
-                      </h3>
-                      <br>
-                      <p data-lang="true"
-                         data-pt="Desenvolvimento de uma aplicação web para instruções sobre metodologias ágeis, com foco no SCRUM. 
-                         Fui responsável pela elaboração do conteúdo explicativo sobre papéis e eventos do SCRUM, e pela implementação da navegação entre páginas utilizando HTML, CSS e JavaScript."
-                         data-en="Development of a web application for instructions on agile methodologies, focusing on SCRUM.
-                         I was responsible for developing the explanatory content about SCRUM roles and events, and implementing page navigation using HTML, CSS, and JavaScript.">
-                         Desenvolvimento de uma aplicação web para instruções sobre metodologias ágeis, com foco no SCRUM. 
-                         Fui responsável pela  elaboração do conteúdo explicativo sobre papéis e eventos do SCRUM, e pela implementação da navegação entre páginas utilizando HTML, CSS e JavaScript.
-                      </p>
-                    <br>
-                    <br>
-                    <a href="https://github.com/ScrumerDataAPI/ScrumerDataAPI" class="btn-outline" target="_blank">GitHub
-                        Repository</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Claudia Nunes</h3>
+                    <p data-lang="true" data-pt="Desenvolvedora de Software | Engenheira de Produção"
+                        data-en="Software Developer | Production Engineer">
+                        Desenvolvedora de Software | Engenheira de Produção
+                    </p>
                 </div>
-                <img src="assets\img\Projeto1.png" alt="Project Image">
+
+                <div class="footer-social">
+                    <a href="https://github.com/Claudia-Nunes" target="_blank" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/claudia-nuness/" target="_blank" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:claudia.dn@outlook.com" title="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <div class="project">
-                <div class="project-text">
-                    <h3 data-lang="true" data-pt="2º Projeto ABP - Aplicação Web para Aluguel de Bicicletas Peer-to-Peer" data-en="2nd ABP Project - Web Application for Peer-to-Peer Bicycle Rental">
-                        2º Projeto ABP - Aplicação Web para Aluguel de Bicicletas Peer-to-Peer
-                      </h3>
-                      <br>
-                      <p data-lang="true"
-                         data-pt="Desenvolvimento de uma plataforma web para aluguel de bicicletas no modelo peer-to-peer.
-                         Fui responsável pela criação do protótipo no Figma, pela modelagem do banco de dados PostgreSQL e pelo desenvolvimento do módulo de cadastro de usuários utilizando TypeScript e React."
-                         data-en="Development of a web platform for peer-to-peer bicycle rentals.
-                         I was responsible for creating the Figma prototype, modeling the PostgreSQL database, and developing the user registration module using TypeScript and React.">
-                         Desenvolvimento de uma plataforma web para aluguel de bicicletas no modelo peer-to-peer.
-                         Fui responsável pela criação do protótipo no Figma, pela modelagem do banco de dados PostgreSQL e pelo desenvolvimento do módulo de cadastro de usuários utilizando TypeScript e React.
-                      </p>
-                    <br>
-                    <br>
-                    <a href="https://github.com/DevsDomain/Bike4you" class="btn-outline" target="_blank">GitHub
-                        Repository</a>
-
-                </div>
-                <img src="assets\img\Projeto2.png" alt="Project Image">
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> Claudia Nunes. <span data-lang="true"
+                        data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos
+                        reservados.</span></p>
             </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <h3 data-lang="true" data-pt="3º Projeto ABP - Sistema Web para Gerenciamento de Projetos" data-en="3rd ABP Project - Web System for Project Management">
-                        3º Projeto ABP - Sistema Web para Gerenciamento de Projetos
-                      </h3>
-                      <br>
-                      <p data-lang="true"
-                         data-pt="Criação de um sistema web para controle de tarefas, progresso e análise de dados em projetos.
-                         Fui responsável pela criação do protótipo no Figma, pela construção das páginas de dashboard com gráficos em React e pela integração dos dados utilizando MongoDB."
-                         data-en="Creation of a web system for task control, progress tracking, and data analysis in projects.
-                         I was responsible for creating the Figma prototype, building the dashboard pages with graphs in React, and integrating the data using MongoDB.">
-                         Criação de um sistema web para controle de tarefas, progresso e análise de dados em projetos.
-                         Fui responsável pela criação do protótipo no Figma, pela construção das páginas de dashboard com gráficos em React e pela integração dos dados utilizando MongoDB.
-                      </p>
-                    <br>
-                    <br>
-                    <a href="https://github.com/DevsDomain/D-Traker" class="btn-outline" target="_blank">GitHub
-                        Repository</a>
-                </div>
-                <img src="assets\img\Projeto3.png" alt="Project Image">
-            </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <h3 data-lang="true" data-pt="4º Projeto ABP - Aplicação Mobile para Controle de Alimentação e Nutrição" data-en="4th ABP Project - Mobile Application for Food and Nutrition Control">
-                        4º Projeto ABP - Aplicação Mobile para Controle de Alimentação e Nutrição
-                      </h3>
-                      <br>
-                      <p data-lang="true"
-                         data-pt="Desenvolvimento de um aplicativo mobile para registro e monitoramento de ingestão de alimentos e nutrientes.
-                         Fui responsável pela criação do protótipo no Figma, pelo desenvolvimento da interface de registro de alimentos no React Native e pela configuração da conexão com os bancos de dados MongoDB e PostgreSQL."
-                         data-en="Development of a mobile application for recording and monitoring food and nutrient intake.
-                         I was responsible for creating the Figma prototype, developing the food registration interface in React Native, and configuring the connection with the MongoDB and PostgreSQL databases.">
-                         Desenvolvimento de um aplicativo mobile para registro e monitoramento de ingestão de alimentos e nutrientes.
-                         Fui responsável pela criação do protótipo no Figma, pelo desenvolvimento da interface de registro de alimentos no React Native e pela configuração da conexão com os bancos de dados MongoDB e PostgreSQL.
-                      </p>
-                    <br>
-                    <br>
-                    <a href="https://github.com/DevsDomain/D-Nutri" class="btn-outline" target="_blank">GitHub
-                        Repository</a>
-                </div>
-                <img src="assets\img\Projeto4.png" alt="Project Image">
-            </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <h3 data-lang="true" data-pt="5º Projeto ABP - D-FireTrack: Sistema de Monitoramento de Queimadas" data-en="5th ABP Project - D-FireTrack: Wildfire Monitoring System">
-                        5º Projeto ABP - D-FireTrack: Sistema de Monitoramento de Queimadas
-                      </h3>
-                      <br>
-                      <p data-lang="true"
-                         data-pt="Desenvolvimento de um sistema web para monitoramento de queimadas e cicatrizes de fogo através de dados geoespaciais.
-                         Fui responsável pela criação do protótipo no Figma, pela implementação da integração entre o mapa interativo e a seleção de coordenadas, bem como pelo desenvolvimento do painel de filtros por período de datas e área geográfica utilizando React e TypeScript.
-                         Além disso, colaborei na estruturação do backend para a gestão das informações no banco de dados MongoDB."
-                         data-en="Development of a web system for monitoring wildfires and burn scars using geospatial data.
-                         I was responsible for creating the Figma prototype, implementing the integration between the interactive map and coordinate selection, as well as developing the filter panel for date range and geographic area using React and TypeScript.
-                         Additionally, I contributed to structuring the backend for managing information in the MongoDB database.">
-                         Desenvolvimento de um sistema web para monitoramento de queimadas e cicatrizes de fogo através de dados geoespaciais.
-                         Fui responsável pela criação do protótipo no Figma, pela implementação da integração entre o mapa interativo e a seleção de coordenadas, bem como pelo desenvolvimento do painel de filtros por período de datas e área geográfica utilizando React e TypeScript.
-                         Além disso, colaborei na estruturação do backend para a gestão das informações no banco de dados MongoDB.
-                      </p>
-                    <br>
-                    <br>
-                    <a href="https://github.com/DevsDomain/D-FireTrack" class="btn-outline" target="_blank">GitHub
-                        Repository</a>
-                </div>
-                <img src="assets\img\Projeto5.png" alt="Project Image">
-            </div>
-
-
         </div>
-    </section>
-    </main>
-    <footer>
-        <div class="social-icons">
-            <a href="https://github.com/Claudia-Nunes" target="_blank"><img src="assets\img\github.png"
-                    alt="github"></a>
-            <a href="https://www.linkedin.com/in/claudia-nuness/" target="_blank"><img src="assets\img\linkedin.png"
-                    alt="LinkedIn"></a>
-            <a href="mailto:claudia.dn@outlook.com" target="_blank"><img src="assets\img\email.png" alt="Email"></a>
-        </div>
-        <p>Claudia Nunes 2025</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
